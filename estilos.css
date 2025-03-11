@@ -1,0 +1,109 @@
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a0033;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #9b59ff;
+            text-shadow: 0 0 10px #6a0dad;
+        }
+        
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        #search-field {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            background-color: #2d0066;
+            color: white;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 20px 20px 0;
+            background-color: #8a2be2;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #6a0dad;
+        }
+        
+        #character-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .character-card {
+            background: linear-gradient(145deg, #4b0082, #6a0dad);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            transform: rotate(-3deg);
+            transition: all 0.3s ease;
+        }
+        
+        .character-card:nth-child(even) {
+            transform: rotate(3deg);
+        }
+        
+        .character-card:hover {
+            transform: scale(1.05) rotate(0);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #9b59ff;
+        }
+        
+        .character-info {
+            padding: 15px;
+        }
+        
+        .character-name {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #d8b5ff;
+        }
+        
+        .character-status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .alive {
+            background-color: #4CAF50;
+        }
+        
+        .dead {
+            background-color: #f44336;
+        }
+        
+        .unknown {
+            background-color: #607D8B;
+        }
