@@ -9,7 +9,7 @@
             
             
             if (characterName.trim() !== '') {
-                fetchCharacters(?name=${characterName});
+                fetchCharacters(`?name=${characterName}`);
             } else {
 
                 fetchCharacters();
