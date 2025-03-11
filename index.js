@@ -16,7 +16,7 @@
             }
         };
         
-       const fetchCharacters = (query = '') => {
+      const fetchCharacters = (query = '') => {
     fetch(`https://rickandmortyapi.com/api/character/${query}`)
         .then(res => res.json())
         .then(data => {
@@ -35,6 +35,7 @@
             container.innerHTML = '<h2 style="color: #9b59ff;">Error al cargar datos</h2>';
         });
 };
+
                 .catch(error => {
                     console.error("Error fetching data:", error);
                     const container = document.getElementById("character-container");
