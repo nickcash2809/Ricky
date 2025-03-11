@@ -16,20 +16,25 @@
             }
         };
         
-        const fetchCharacters = (query = '') => {
-            fetch(https://rickandmortyapi.com/api/character/${query})
-                .then(res => res.json())
-                .then(data => {
-                    if (data.results) {
-                        displayCharacters(data.results);
-                    } else if (data.error) {
-                        
-                        const container = document.getElementById("character-container");
-                        container.innerHTML = <h2 style="color: #9b59ff;">No se encontraron personajes</h2>;
-                    } else {
-                        displayCharacters([data]);
-                    }
-                })
+       const fetchCharacters = (query = '') => {
+    fetch(`https://rickandmortyapi.com/api/character/${query}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.results) {
+                displayCharacters(data.results);
+            } else if (data.error) {
+                const container = document.getElementById("character-container");
+                container.innerHTML = '<h2 style="color: #9b59ff;">No se encontraron personajes</h2>';
+            } else {
+                displayCharacters([data]);
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching data:", error);
+            const container = document.getElementById("character-container");
+            container.innerHTML = '<h2 style="color: #9b59ff;">Error al cargar datos</h2>';
+        });
+};
                 .catch(error => {
                     console.error("Error fetching data:", error);
                     const container = document.getElementById("character-container");
